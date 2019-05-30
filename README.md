@@ -18,13 +18,13 @@ m
 #To arrange the table in descending order based on Means value and save it under 'd'
 d<-m[order(-m$Means),]
 
-# 'head' command allows selection of first 10 values for data stored under 'd'. If only head (d) was written, it would show the first five results.
+#'head' command allows selection of first 10 values for data stored under 'd'. If only head (d) was written, it would show the first five results.
 head(d,10)
 
-# Select column 3 (i.e. Means) and show genes with average<10. 
+#Select column 3 (i.e. Means) and show genes with average<10. 
 (m[which(m[,3]<10),])
 
-# To count the number of rows which have average<10. nrow or dim could be used to count the number of rows
+#To count the number of rows which have average<10. nrow or dim could be used to count the number of rows
 nrow(m[which(m[,3]<10),])
 
 #To draw a pair plot diagram for all the data saved under 'm'
