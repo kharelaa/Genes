@@ -1,4 +1,4 @@
-R program coding for Genes document
+R program coding descriptoon for Genes document. When pressed "Raw" both the command and description will be displayed together.
 
 #download.file command allows us to download .tsv documents and destfile="gene.tsv" at the end ensures the retrieved data is stored under "gene_tsv" 
 download.file("https://raw.githubusercontent.com/markziemann/SLE712_files/master/week10_files/gene_expression.tsv",destfile="gene.tsv")
