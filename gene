@@ -1,12 +1,32 @@
+#To download the file 
 download.file("https://raw.githubusercontent.com/markziemann/SLE712_files/master/week10_files/gene_expression.tsv",destfile="gene.tsv")
+
+#To save table under 'm' and read table making the gene accession number the row names 
 m<-read.table("gene.tsv", header=T,row.names=1)
+
+#To show the data stored under 'm'
 m
+
+#To make a new column titled Means and add mean values of the other columns
 m$Means<-rowMeans(as.matrix(m))
+
+
+#To show the data stored under 'm'
 m
+
+#To arrange the table in descending order based on Means value and save it under 'd'
 d<-m[order(-m$Means),]
+
+# 'head' command allows selection of first 10 values for values stored under 'd'
 head(d,10)
+
+# Select column 3 (i.e. Means) and show genes with average<10
 (m[which(m[,3]<10),])
+
+# To count the number of rows which have average<10
 nrow(m[which(m[,3]<10),])
+
+#To draw a pair plot diagram for all the data saved under 'm'
 pairs(m)
 
 
